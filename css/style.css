@@ -1,4 +1,7 @@
 /* Start Global rules */
+:root {
+    --main-color: #10cab7;
+}
 * {
     --webkit-box-sizing: border-box;
     --moz-box-sizing: border-box;
@@ -97,23 +100,65 @@ body {
 
 
 .header .container .links ul::before {
-     content: "";
+    content: "";
+    border: 10px solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
 }
 
 .header .container .links:hover ul {
   display: block;
 }
-.header .container .links ul li {
- margin-left: 5px;
-  margin-bottom: 5px;
+
+.header .container .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+
+.header .container .links ul li a:hover {
+    padding-left: 25px;
 }
 
 .header .container .links ul li:not(:last-child){
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ddd;
 }
 
-.header .container .links ul li a {
- text-decoration: none;
- color: rgb(66, 64, 64);
+/*End header*/
+
+/*Start Landing section*/
+.landing {
+    background-image: url("../images/mountain.webp");
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
 }
+
+.landing .intro-text {
+    width: 320px;
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+     color: var(--main-color);
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: white;
+}
+
+/*End landing section*/
 

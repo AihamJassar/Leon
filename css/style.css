@@ -1,7 +1,11 @@
 /* Start Global rules */
 :root {
     --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-background: #f6f6f6;
+    --main-padding: 60px;
 }
+
 * {
     --webkit-box-sizing: border-box;
     --moz-box-sizing: border-box;
@@ -9,6 +13,19 @@
     box-sizing: border-box;
 }
 
+.special-header {
+    text-align: center;
+    h2 {
+        font-size: 50px;
+        font-weight: 800;
+        margin: 0;
+        color: gainsboro;
+    }
+    p {
+        margin-top: -20px;
+        font-size: 20px;
+    }
+}
 body {
     font-family: "Work sans", sans-serif;
 }
@@ -162,3 +179,55 @@ body {
 
 /*End landing section*/
 
+/*Start features*/
+.features {
+    background-color: var(--section-background); 
+    padding-top: 60px;
+    padding-bottom: : 60px;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.features .container .col {
+    text-align: center;
+    padding: 20px;
+}
+
+.features .container .col i {
+    color: var(--main-color);
+}
+
+.features .container .col h3 {
+    font-weight: 800px;
+    margin: 30px 0;
+}
+
+.features .container .col p {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* End features */
+
+/*Start services*/
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.services .container .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr);
+    gap: 20px;
+}
+
+.services .container .content .left .ser {
+    display: flex;
+    color: blue;
+}
+/*End services*/

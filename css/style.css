@@ -359,16 +359,32 @@ body {
 }
 
 .about .about-content {
-    display: grid;
-    grid-auto-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 50px;
     margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .about .about-content .content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .image {
+    width: 250px;
+    height: 375px;
+}
+
+@media (max-width: 991px){
+    .about .about-content .image{
+        margin: 0 auto 60px;
+}
 }
 
 .about .about-content .image img{

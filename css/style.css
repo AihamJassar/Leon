@@ -325,3 +325,111 @@ body {
     line-height: 1.6;
     margin-bottom: 0;
 }
+
+/*Start about*/
+.about {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.about .about-content {
+    display: grid;
+    grid-auto-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px; 
+    margin-bottom: 100px; 
+}
+
+.about .about-content .image img{
+    max-width: 100%;
+}
+
+.about .about-content .content p{
+    
+}
+
+.about .about-content .content p:first-of-type{
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+.about .about-content .content hr{
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+}
+
+.about .about-content .content p:last-of-type{
+    line-height: 2;
+    color: #777;
+}
+
+/*End about*/
+
+/*Start contact*/
+
+
+.contact {
+    background-color: var(--section-background);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+ 
+.contact .info {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    text-align: center;
+}
+
+.contact .info .label {
+    font-size: 35px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.contact .info .link{
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact .info .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact .info .social i {
+    margin-left: 10px;
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    .contact .info .link,
+    .contact .info .label {
+        font-size: 25px;
+    }
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 30px 10px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/*End contact*/

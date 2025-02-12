@@ -1,10 +1,15 @@
-/* Start Global rules */
+/* Start Variables */
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
     --section-background: #f6f6f6;
     --main-padding: 60px;
+    --main-duration: 0.3s;
 }
+
+/* End Variables */
+
+/* Start Global Rules */
 
 * {
     --webkit-box-sizing: border-box;
@@ -13,20 +18,8 @@
     box-sizing: border-box;
 }
 
-.special-header {
-    text-align: center;
-
-    h2 {
-        font-size: 50px;
-        font-weight: 800;
-        margin: 0;
-        color: gainsboro;
-    }
-
-    p {
-        margin-top: -20px;
-        font-size: 20px;
-    }
+html {
+    scroll-behaver: smooth;
 }
 
 body {
@@ -60,6 +53,39 @@ body {
         width: 1170px;
     }
 }
+
+/* Start Components */
+
+.special-header {
+    text-align: center;
+
+    h2 {
+        font-size: 100px;
+        font-weight: 800;
+        margin: 0;
+        color: #ebeced;
+        letter-spacing: -3px;
+    }
+
+    p {
+        margin: -30px 0 0;
+        font-size: 20px;
+        color: #797979;
+    }
+}
+
+@media (max-width: 787px) {
+    .special-header {
+        h2 {
+            font-size: 60px;
+        }
+        p {
+            margin-top: -20px;
+        }
+    }
+}
+
+/* End Components */
 
 /* Start header */
 
@@ -186,8 +212,8 @@ body {
 /*Start features*/
 .features {
     background-color: var(--section-background);
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
 }
 
 .features .container {
@@ -336,19 +362,17 @@ body {
     display: grid;
     grid-auto-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 50px;
+    margin-top: 100px;
+}
+
+.about .about-content .content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 100px; 
-    margin-bottom: 100px; 
 }
 
 .about .about-content .image img{
     max-width: 100%;
-}
-
-.about .about-content .content p{
-    
 }
 
 .about .about-content .content p:first-of-type{
